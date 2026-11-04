@@ -1,0 +1,65 @@
+# DIY Flight Cockpit — Git file attributes (no Git LFS)
+# Auto-detect text files and normalize committed line endings to LF.
+* text=auto
+
+# Cross-platform source, documentation and configuration
+*.py      text eol=lf
+*.pyi     text eol=lf
+*.FCMacro text eol=lf
+*.md      text eol=lf
+*.mdx     text eol=lf
+*.mmd     text eol=lf
+*.mermaid text eol=lf
+*.yaml    text eol=lf
+*.yml     text eol=lf
+*.toml    text eol=lf
+*.json    text eol=lf
+*.jsonc   text eol=lf
+*.ini     text eol=lf
+*.cfg     text eol=lf
+*.txt     text eol=lf
+*.csv     text eol=lf
+*.svg     text eol=lf
+*.sh      text eol=lf
+*.ps1     text eol=lf
+*.gitignore text eol=lf
+*.gitattributes text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Windows-specific launchers
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# FreeCAD native documents are ZIP-based binaries: no text diff or merge.
+*.FCStd binary
+*.fcstd binary
+
+# CAD geometry and manufacturing exports (kept in normal Git, not LFS).
+*.stl  binary
+*.STL  binary
+*.3mf  binary
+*.3MF  binary
+*.step -text -diff -merge
+*.STEP -text -diff -merge
+*.stp  -text -diff -merge
+*.STP  -text -diff -merge
+*.iges -text -diff -merge
+*.igs  -text -diff -merge
+
+# Media and packaged reference documents
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.zip  binary
+*.7z   binary
+*.wav  binary
+*.mp3  binary
+*.mp4  binary
+*.mov  binary
+
+# Intentional: *.dxf (ASCII variants), *.gcode, *.nc retain auto-detection.
