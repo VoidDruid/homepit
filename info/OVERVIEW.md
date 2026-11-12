@@ -7,7 +7,7 @@
 Основные возможности:
 
 - Эргономичное управление через HOTAS Thrustmaster NEO.
-- Программируемая RGB-панель управления на Novation Launchpad S.
+- Программируемая RGB-панель управления на Novation Launchpad Mk2.
 - Двухканальная тактильная отдача через bass shakers в сиденье и спинке.
 - Единая программная система управления периферией на Python.
 - Отслеживание движений головы через веб-камеру.
@@ -28,7 +28,7 @@ flowchart TB
         DIST --> DC["DC-DC · 24 → 12 В"]
         DC --> HUB["USB 3.x Hub · Powered"]
         HOTAS["HOTAS NEO · HID"] --> HUB
-        HUB <--> LP["Launchpad S · MIDI"]
+        HUB <--> LP["Launchpad Mk2 · MIDI"]
         HUB --> DAC["USB Stereo DAC"]
         DAC -->|"Stereo RCA L/R"| AMP
     end
@@ -52,7 +52,7 @@ flowchart TB
 flowchart TB
     subgraph FRAME["Съёмная рама кокпита"]
         HOTAS["HOTAS NEO"]
-        LP["Launchpad S"]
+        LP["Launchpad Mk2"]
         DAC["USB Stereo DAC"]
     end
 
@@ -86,7 +86,7 @@ flowchart TB
 | Компонент | Назначение |
 |---|---|
 | Thrustmaster T.Flight HOTAS NEO | Управление полётом |
-| Novation Launchpad S | Программируемая панель 8×8 RGB |
+| Novation Launchpad Mk2 | Программируемая панель 8×8 RGB |
 | Full HD USB-веб-камера | Head tracking |
 | ПК Windows | Игры и программная интеграция |
 | Кресло TopChairs Vertus | Несущая конструкция кокпита |
@@ -116,7 +116,7 @@ flowchart TB
 ## 5. Инструменты и методы
 
 - FreeCAD
-- Python 3.13
+- Python 3.12 (Cockpit Service; MIDI через Mido + python-rtmidi)
 
 ## 6. ПЛАН
 
